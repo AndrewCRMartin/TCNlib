@@ -150,7 +150,7 @@ sub runExec {
         if (exists write2tmp->Cache->{$inputFile}) {
             write2tmp->retain_file(file_name => $inputFile);
         }
-        croak "pdbsolve failed: $stderr\nCmd run: $cmd\n";
+        croak "pdbsolv failed: $stderr\nCmd run: $cmd\n";
     }
     elsif (! -e $outputASAFile) {
         croak "pdbsolv failed to create an output file. STDERR: $stderr\n";
