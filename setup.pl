@@ -11,7 +11,7 @@ print "Getting external packages ...\n";
 system("./getexternalpackages");
 
 print "Getting perl dependencies ...\n";
-system("yes | $::perl ./getperldeps.pl");
+system("yes | sudo $::perl ./getperldeps.pl");
 
 print "Copying TCNPerlVars.defaults to TCNPerlVars.pm ...\n";
 system("cp lib/TCNPerlVars.defaults lib/TCNPerlVars.pm");
