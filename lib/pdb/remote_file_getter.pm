@@ -21,7 +21,8 @@ sub get_pdb_file_data {
 sub _build_URL {
     my $self = shift;
     croak "You have not set a pdb code!" if ! defined $self->pdb_code();
-    return "http://www.rcsb.org/pdb/files/" . uc ($self->pdb_code) . ".pdb";
+#    return "http://www.rcsb.org/pdb/files/" . uc ($self->pdb_code) . ".pdb";
+    return "ftp://ftp.ebi.ac.uk/pub/databases/pdb/data/structures/all/pdb/pdb" . lc ($self->pdb_code) . ".ent.gz";
 }
 
 __PACKAGE__->meta->make_immutable;
