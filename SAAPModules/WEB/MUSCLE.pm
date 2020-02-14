@@ -161,8 +161,14 @@ sub RESTRun
     # Check for HTTP error codes
     if ( $response->is_error ) 
     {
-        $response->content() =~ m/<h1>([^<]+)<\/h1>/;
-        return(0, "HTTP status: $response->code ($response->message: $1)");
+        if($response->content() =~ m/<h1>([^<]+)<\/h1>/)
+        {
+            return(0, "HTTP status: $response->code ($response->message: $1)");
+        }
+        else
+        {
+            return(0, "HTTP status: $response->code ($response->message: Undefined)");
+        }
     }
 
     # The job id is returned
