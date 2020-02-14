@@ -19,7 +19,7 @@ has '_URLBase' => (
     isa => 'Str',
     required => 1,
     lazy => 1,
-    default => "http://www.bioinf.org.uk/cgi-bin/pdbsws/query.pl?plain=1&qtype=",
+    default => "http://www.bioinf.org.uk/servers/pdbsws/query.cgi?plain=1&qtype=",
 );
 
 sub getACsFromPDBCodeAndChainID {
