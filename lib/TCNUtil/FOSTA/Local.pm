@@ -14,7 +14,7 @@ has 'FOSTADBH' => (
 
 sub _buildFOSTADBH {
     my $dbname3 = "fosta";
-    my $dbserver3 = 'acrm8.biochem.ucl.ac.uk';
+    my $dbserver3 = 'db';
     my $datasource3 = "dbi:Pg:dbname=$dbname3;host=$dbserver3";
     
     my $fostadbh = DBI->connect ($datasource3)
